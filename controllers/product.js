@@ -3,7 +3,7 @@ import Product from "../models/product";
 
 
 // Create and Save a new product
-export const create = (req, res) => {
+export const create = async (req, res) => {
   // Get Body from req
   const body_name = req.body.name
   const body_price = req.body.prices
@@ -26,7 +26,7 @@ export const create = (req, res) => {
 
 
 // Retrieve all products from the database.
-export const findAll = (req, res) => {
+export const findAll = async (req, res) => {
   const all = await Product.find()
   res.json(all);
 };
@@ -34,7 +34,7 @@ export const findAll = (req, res) => {
 
 
 // Find a single product with an id
-export const findOne = (req, res) => {
+export const findOne = async (req, res) => {
 
   // Find product by id
   const id = req.params.id
@@ -53,7 +53,7 @@ export const findOne = (req, res) => {
 
 
 // Update a product by the id in the request
-export const updateOne = (req, res) => {
+export const updateOne = async (req, res) => {
   // Get id for update product
   const id = req.params.id
 
@@ -73,7 +73,7 @@ export const updateOne = (req, res) => {
 
 
 // Delete a product with the specified id in the request
-export const deleteOne = (req, res) => {
+export const deleteOne = async (req, res) => {
   // Get id for delete
   const id = req.params.id
 

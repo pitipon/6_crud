@@ -6,7 +6,7 @@ import Product from "../models/product";
 export const create = async (req, res) => {
   // Get Body from req
   const body_name = req.body.name
-  const body_price = req.body.prices
+  const body_price = req.body.price
 
   try {
     // create product

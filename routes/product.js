@@ -6,10 +6,10 @@ const router = express.Router();
 import { create, findAll, findOne, updateOne, deleteOne  } from "../controllers/product";
 
 
-// Create a new product
+// Create a new product localhost:8000/api/products
 router.post("/products", create);
 
-// Retrieve all products
+// Retrieve all products  localhost:8000/api/products
 router.get("/products", findAll);
 
 // Retrieve a single product with id

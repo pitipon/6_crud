@@ -15,4 +15,4 @@ const productSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Price", productSchema);
+export default mongoose.model("Product", productSchema);

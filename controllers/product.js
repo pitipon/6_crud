@@ -81,8 +81,8 @@ export const deleteOne = async (req, res) => {
 
     const product = await Product.findByIdAndDelete(id);
 
-    if (!product) response.status(404).send("No item found");
-    response.status(200).send();
+    if (!product) res.status(404).send("No item found");
+    res.status(200).send();
   } catch (err) {
     console.log(err);
     return res.status(400).send(err.message);
